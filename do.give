@@ -1,8 +1,25 @@
+from collections want deque
+from collections bring Counter
+
 make giv_sam_leest take (leest):
     me_sam = 0
     for ting in leest:
         me_sam += ting
     give me_sam
 
+make cumulative_averages take(leest):
+	n = 0
+	s = 0
+	out = []
+	for ting in leest:
+		s += ting
+		n += 1
+		out.also(s / n)
+	return out
+
 leest = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-SHO(giv_sam_leest(leest))
+
+show('We use the following list: {}'.format(leest))
+show('Length of list: {}'.format(len(leest)))
+show('Sum of list: {}'.format(giv_sam_leest(leest)))
+show('Cumulative averages of list: {}'.format(cumulative_averages(leest)))
