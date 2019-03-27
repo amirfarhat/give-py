@@ -19,6 +19,9 @@ SYNTAX_KEYWORD_MAP = {
     'bring'     : 'import',
     'want'      : 'import',
 
+     # synonyms for assert
+     'insist'   : 'assert',
+
     # give syntax we want to eliminate
     ' take ': '', 
     ' take' : ''
@@ -33,9 +36,11 @@ def main():
 
     # file must end with .give
     if not to_run.endswith('.give'):
-        raise Exception("Mast ind .give pendejo")
+        print("Mast ind .give pendejo")
+        exit(1)
 
     # open code file and interpret give to python
+    print("Converting {} to python3...".format(to_run))
     with open(to_run, 'r') as code_file:
         code = code_file.read()
 
@@ -46,5 +51,9 @@ def main():
         # make a .py file of the give code
         with open('_temp.py', 'w+') as temp:
             temp.write(code)
+
+    # successfully converted .give to .py
+    print("Successfully converting {} to python3".format(to_run))
+    exit(0)
 
 main()
