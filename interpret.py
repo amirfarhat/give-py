@@ -2,7 +2,11 @@ import sys
 
 # syntax to swap out for python3
 SYNTAX_KEYWORD_MAP = {
+
+     # synonyms for def
     'make'      : 'def',
+     
+     # synonyms for return
     'give'      : 'return',
 
      # synonyms for print
@@ -11,9 +15,15 @@ SYNTAX_KEYWORD_MAP = {
     'sho'       : 'print',
     'show'      : 'print',
 
+     # synonyms for append
     '.also'     : '.append',
-    'bring'     : 'want',
+    '.and'      : '.append',
+    
+     # synonyms for import
+    'bring'     : 'import',
+    'want'      : 'import',
 
+    # give syntax we want to eliminate
     ' take ': '', 
     ' take' : ''
 }
