@@ -18,8 +18,12 @@ SYNTAX_KEYWORD_MAP = {
     ' take' : ''
 }
 
-if __name__ == '__main__':
+def main():
+    # get .give file as first arg
     _, to_run = sys.argv
+
+    # sanitize .give filename
+    to_run = to_run.strip()
 
     # file must end with .give
     if not to_run.endswith('.give'):
@@ -33,8 +37,8 @@ if __name__ == '__main__':
         for old, new in SYNTAX_KEYWORD_MAP.items():
             code = code.replace(old, new)
     
-        # print(code)
-
         # make a .py file of the give code
-        with open('given.py', 'w') as given:
-            given.write(code)
+        with open('_temp.py', 'w+') as temp:
+            temp.write(code)
+
+main()
