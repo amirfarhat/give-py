@@ -10,14 +10,10 @@ SYNTAX_KEYWORD_MAP = {
     'give'      : 'return',
 
      # synonyms for print
-    'SHO'       : 'print',
-    'SHOW'      : 'print',
-    'sho'       : 'print',
     'show'      : 'print',
 
      # synonyms for append
     '.also'     : '.append',
-    '.and'      : '.append',
     
      # synonyms for import
     'bring'     : 'import',
