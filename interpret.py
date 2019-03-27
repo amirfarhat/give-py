@@ -10,9 +10,9 @@ SYNTAX_KEYWORD_MAP = {
     'SHOW'      : 'print',
     'sho'       : 'print',
     'show'      : 'print',
+
     '.also'     : '.append',
     'bring'     : 'want',
-    ''
 
     ' take ': '', 
     ' take' : ''
